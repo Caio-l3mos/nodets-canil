@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node": "24.x"
+    "node": ">=22.0.0"
   },
   "homepage": "https://github.com/Caio-l3mos/nodets-canil#readme",
   "bugs": {
@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
+     "build": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "@types/express": "^5.0.6",
     "@types/mustache-express": "^1.2.5",
     "@types/node": "^26.0.1",
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "typescript": "^6.0.3"
   }
 }
